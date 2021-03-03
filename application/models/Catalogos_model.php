@@ -14,6 +14,9 @@ class Catalogos_model extends CI_Model {
 	function get_departamentos(){
 		return $this->db->get('departamentos')->result();
 	}
+	function get_cajeros(){
+		return $this->db->get('usuarios')->result();
+	}
 	function alta_producto($data){
 		$this->db->insert('productos',$data);
 	}
@@ -25,6 +28,30 @@ class Catalogos_model extends CI_Model {
 		$this->db->where('id_producto',$data['id_producto']);
 		unset($data['id_producto']);
 		$this->db->update('productos',$data);
+	}
+	function alta_departamento($data){
+		$this->db->insert('departamentos',$data);
+	}
+	function borrar_departamento($id_departamento){
+		$this->db->where('id_departamento',$id_departamento);
+		$this->db->delete("departamentos");
+	}
+	function editar_departamento($data){
+		$this->db->where('id_departamento',$data['id_departamento']);
+		unset($data['id_departamento']);
+		$this->db->update('departamentos',$data);
+	}
+	function alta_cajero($data){
+		$this->db->insert('usuarios',$data);
+	}
+	function borrar_cajero($id_usuario){
+		$this->db->where('id_usuario',$id_usuario);
+		$this->db->delete("usuarios");
+	}
+	function editar_cajero($data){
+		$this->db->where('id_usuario',$data['id_usuario']);
+		unset($data['id_usuario']);
+		$this->db->update('usuarios',$data);
 	}
 }
 

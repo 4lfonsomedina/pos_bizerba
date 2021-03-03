@@ -1,33 +1,33 @@
 <div class="col-md-1"></div>
 <div class="col-md-10">
-	<div class="panel panel-primary">
-		<div class="panel-heading">CATALOGO DE PRODUCTOS 
+	<div class="panel panel-default">
+		<div class="panel-heading">CATALOGO DE DEPARTAMENTOS 
 			<a class="pull-right btn btn-success btn-xs btn_alta_producto"> <i class="fa fa-plus" aria-hidden="true"></i> </a>
 		</div>
 		<div class="panel-body">
-			<table class="table" id='tabla_catalogo_productos'>
+			<table class="table" id='tabla_catalogo'>
 				<thead>
 					<tr>
 						<th>PLU</th>
-						<th>Descripcion</th>
-						<th>Unidad</th>
-						<th>Departamento</th>
-						<th>Precio</th>
+						<th>DESCRIPCION</th>
+						<th>UNIDAD</th>
+						<th>DEPARTAMENTO</th>
+						<th>PRECIO</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php foreach($productos as $p){?>
 					<tr>
-						<td>
-							<a class='btn_editar_producto' 
-								id_producto='<?= $p->id_producto ?>'
-								plu='<?= $p->PLU ?>'
-								descripcion='<?= $p->descripcion ?>'
-								um='<?= $p->um ?>'
-								departamento='<?= $p->departamento ?>'
-								precio='<?= $p->precio ?>'
-							><?= $p->PLU ?></a></td>
-						<td><?= $p->descripcion ?></td>
+						<td><?= $p->PLU ?></td>
+						<td><a class='btn_editar_producto' 
+                id_producto='<?= $p->id_producto ?>'
+                plu='<?= $p->PLU ?>'
+                descripcion='<?= $p->descripcion ?>'
+                um='<?= $p->um ?>'
+                departamento='<?= $p->departamento ?>'
+                precio='<?= $p->precio ?>'
+                iva='<?= $p->iva ?>'
+              ><?= $p->descripcion ?></a></td>
 						<td><?= $p->unidad2 ?></td>
 						<td><?= $p->departamento2 ?></td>
 						<td><?= $p->precio ?></td>
@@ -55,6 +55,8 @@
         <b>PLU</b><br><input type="number" name="PLU" class="form-control" required>
         <b>Descripcion</b><br><input type="text" name="descripcion" class="form-control" required>
         <b>Precio</b><br><input type="number" name="precio" class="form-control" required>
+        <b>IVA</b><input type="checkbox" class="check_input"><input type="hidden" name='iva' value='0'>
+        <br><br>
         <b>Unidad</b><br>
         <select class="form-control" name="um">
         	<?php foreach($unidades as $u){ ?>
@@ -101,6 +103,8 @@
         <b>PLU</b><br><input type="number" name="PLU" class="form-control" id="plu_edit" required>
         <b>Descripcion</b><br><input type="text" name="descripcion" class="form-control" id="descripcion_edit" required>
         <b>Precio</b><br><input type="number" name="precio" class="form-control" id="precio_edit" required>
+        <b>IVA</b><input type="checkbox" class="check_input" id="iva_edit_check"><input type="hidden" name='iva' id="iva_edit">
+        <br><br>
         <b>Unidad</b><br>
         <select class="form-control" name="um" id="um_edit">
         	<?php foreach($unidades as $u){ ?>

@@ -30,9 +30,9 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catalogos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?= site_url('Catalogos_controller/productos') ?>">Productos</a></li>
-            <li><a href="#">Departamentos</a></li>
+            <li><a href="<?= site_url('Catalogos_controller/departamentos') ?>">Departamentos</a></li>
             <!--<li class="divider"></li>-->
-            <li><a href="#">Cajeros</a></li>
+            <li><a href="<?= site_url('Catalogos_controller/cajeros') ?>">Cajeros</a></li>
           </ul>
         </li>
 
@@ -60,6 +60,8 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
           	<?= $this->session->userdata('nombre') ?> <i class="fa fa-caret-square-o-down" aria-hidden="true"></i></a>
           <ul class="dropdown-menu" role="menu">
+            <li><a href="<?= site_url('Empresa_controller') ?>"><i class="fa fa-building-o" aria-hidden="true"></i> Empresa</a></li>
+            
             <li><a href="<?= site_url('Welcome') ?>"><i class="fa fa-power-off" aria-hidden="true"></i> Salir</a></li>
           </ul>
         </li>

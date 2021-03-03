@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 			Redirect('Welcome?e');
 		}else{
 			$this->session->set_userdata($empleado);
-			Redirect('Empleado_controller');
+			Redirect('Home_controller');
 		}
 	}
 }
