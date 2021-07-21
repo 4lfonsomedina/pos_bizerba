@@ -27,7 +27,7 @@
       <ul class="nav navbar-nav">
         
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catalogos <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cubes fa-2x" aria-hidden="true"></i> Catalogos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?= site_url('Catalogos_controller/productos') ?>">Productos</a></li>
             <li><a href="<?= site_url('Catalogos_controller/departamentos') ?>">Departamentos</a></li>
@@ -37,16 +37,17 @@
         </li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ventas <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
+<i class="fa fa-money fa-2x" aria-hidden="true"></i> Ventas <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="<?= site_url('Catalogos_controller/productos') ?>">Apertura de caja</a></li>
-            <li><a href="#">Punto de venta</a></li>
-            <li><a href="#">Cierre de caja</a></li>
+            <li><a href="<?= site_url('Ventas_controller/apertura') ?>">Apertura de caja</a></li>
+            <li><a href="<?= site_url('Ventas_controller/pos') ?>">Punto de venta</a></li>
+            <li><a href="<?= site_url('Ventas_controller/cierre') ?>">Cierre de caja</a></li>
           </ul>
         </li>
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Reportes <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-file-text-o fa-2x" aria-hidden="true"></i> Reportes <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?= site_url('Catalogos_controller/productos') ?>">Reporte de ventas</a></li>
             <li><a href="#">Ventas por productos</a></li>
@@ -70,4 +71,4 @@
   </div>
 </nav>
 
-<div style="width: 100%; height: 70px;"></div>
+<div style="width: 100%; height: 8vh;"></div>
