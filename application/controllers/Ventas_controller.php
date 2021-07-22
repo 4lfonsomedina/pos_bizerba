@@ -32,9 +32,10 @@ class Ventas_controller extends CI_Controller {
 	}
 
 	function cierre(){
-		if(!$this->Ventas_model->get_caja_abierta()){ Redirect('Ventas_controller/pos');}
+		$data['caja']=$this->Ventas_model->get_caja_abierta();
+		if(!$data['caja']){ Redirect('Ventas_controller/pos');}
 		$this->load->view('cabecera');
-		$this->load->view('ventas/cierre');
+		$this->load->view('ventas/cierre',$data);
 		$this->load->view('pie');
 	}
 

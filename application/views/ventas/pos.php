@@ -11,7 +11,7 @@
   </div>
 
   <div class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body" style="height: 80vh;">
       <table class="table">
         <thead>
           <tr>
