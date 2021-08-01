@@ -24,6 +24,15 @@ class Ventas_model extends CI_Model {
 		$this->db->insert('retiros',$data);
 	}
 
+	function realizar_cierre($data){
+		$data['hora_cierre']=date('H:i:s');
+		$data['fecha_cierre']=date('Y-m-d');
+		$data['estatus']='C';
+		$this->db->where('id_cajas',$data['id_cajas']);
+		unset($data['id_cajas']);
+		$this->db->update('cajas',$data);
+	}
+
 }
 
 /* End of file Ventas_model.php */

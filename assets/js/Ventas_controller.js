@@ -10,8 +10,21 @@ $(document).ready(function() {
 		$("#total_cajero").val(parseFloat(total_total).toFixed(2));
 	})
 	$(".billete").click(function(){ $(this).select(); })
-
-	$("#finalizar_cierre").click(function(){
+	$("#form_cierre").submit(function(e){
+		e.preventDefault();
+		var validar=false;
+		$(".form_important").each(function(index,element){ 
+			if($(element).val()==""){
+				alert("Verifica la información"); 
+				validar=true;
+			} 
+		});
+		if(validar){return;}
+		$.post("./realizar_cierre",$(this).serialize(),function(r){
+			if(r=='1'){
+				window.location.replace("./apertura");
+			}
+		})
 		console.log("cierre");
 	})
 });

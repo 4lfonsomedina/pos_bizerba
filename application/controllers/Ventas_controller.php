@@ -38,6 +38,10 @@ class Ventas_controller extends CI_Controller {
 		$this->load->view('ventas/cierre',$data);
 		$this->load->view('pie');
 	}
+	function realizar_cierre(){
+		$this->Ventas_model->realizar_cierre($_POST);
+		echo "1";
+	}
 
 	function retiro(){
 		$data['caja']=$this->Ventas_model->get_caja_abierta();

@@ -1,4 +1,6 @@
+<form id="form_cierre">
 <input type="hidden" value="<?= $caja->tipo_cambio ?>" id="tipo_cambio">
+<input type="hidden" value="<?= $caja->id_cajas ?>" name="id_cajas">
 <div class="col-md-2"></div>
 <div class="col-md-4">
   <div class="panel panel-default">
@@ -143,15 +145,19 @@
 	<div class="panel panel-default">
   	<div class="panel-heading">Totales efectivo</div>
   		<div class="panel-body">
-  			<div class="col-md-4">
-  				Total:
-  				<input type="number" class="form-control" readonly value="0" name="total_cajero" id="total_cajero">
+        <div class="col-md-3">
+          Total en retiros:
+          <input type="number" class="form-control form_important" readonly value="0" name="total_retiros" readonly>
+        </div>
+  			<div class="col-md-3">
+  				Total en caja:
+  				<input type="number" class="form-control form_important" readonly value="0" name="efectivo" id="total_cajero">
   			</div>
-  			<div class="col-md-4">
+  			<div class="col-md-3">
   				Tarjeta:
-  				<input type="number" class="form-control" value="0">
+  				<input type="number" class="form-control form_important" value="0" name="tarjeta">
   			</div>
-  			<div class="col-md-4" style="text-align: right;">
+  			<div class="col-md-3" style="text-align: right;">
   				<br>
   				<button class="btn btn-warning" id="finalizar_cierre">Finalizar cierre</button>
   			</div>
@@ -159,3 +165,4 @@
 		</div>
 	</div>
 </div>
+</form>
