@@ -12,7 +12,7 @@
         Tipo de cambio:
         <input type="number" class="form-control" value="<?= $empresa->tipo_cambio ?>" name="tipo_cambio" required>
       </div>
-      <div class="col-xs-2">
+      <div class="col-xs-2" align="right">
         <br>
         <button class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i></button>
       </div>

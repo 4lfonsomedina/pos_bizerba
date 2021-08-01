@@ -10,4 +10,8 @@ $(document).ready(function() {
 		$("#total_cajero").val(parseFloat(total_total).toFixed(2));
 	})
 	$(".billete").click(function(){ $(this).select(); })
+
+	$("#finalizar_cierre").click(function(){
+		console.log("cierre");
+	})
 });

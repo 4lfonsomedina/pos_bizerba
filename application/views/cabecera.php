@@ -42,6 +42,7 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="<?= site_url('Ventas_controller/apertura') ?>">Apertura de caja</a></li>
             <li><a href="<?= site_url('Ventas_controller/pos') ?>">Punto de venta</a></li>
+            <li><a href="<?= site_url('Ventas_controller/retiro') ?>">Retiro de efectivo</a></li>
             <li><a href="<?= site_url('Ventas_controller/cierre') ?>">Cierre de caja</a></li>
           </ul>
         </li>

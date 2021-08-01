@@ -153,7 +153,7 @@
   			</div>
   			<div class="col-md-4" style="text-align: right;">
   				<br>
-  				<button class="btn btn-warning">Finalizar cierre</button>
+  				<button class="btn btn-warning" id="finalizar_cierre">Finalizar cierre</button>
   			</div>
   		</div>
 		</div>

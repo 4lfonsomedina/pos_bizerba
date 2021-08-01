@@ -32,13 +32,17 @@
           <option value="0.08" <?php if($empresa->iva=='0.08'){echo "selected";}?>> 8% </option>
         </select>
       </div>
-      <div class="col-md-6 top_form">
+      <div class="col-md-4 top_form">
         <b>TIPO DE CAMBIO</b>
         <input type="text" class="form-control" name="tipo_cambio" value="<?= $empresa->tipo_cambio ?>">
       </div>
-      <div class="col-md-6 top_form">
+      <div class="col-md-4 top_form">
         <b>FONDO</b>
         <input type="text" class="form-control" name="fondo" value="<?= $empresa->fondo ?>">
+      </div>
+      <div class="col-md-4 top_form">
+        <b>RETIROS</b>
+        <input type="text" class="form-control" name="retiros" value="<?= $empresa->retiros ?>">
       </div>
     </div>
   </div>

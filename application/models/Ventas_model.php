@@ -17,6 +17,13 @@ class Ventas_model extends CI_Model {
 		$this->db->insert('cajas',$data);
 	}
 
+	function registrar_retiro($data){
+		$data['hora']=date('H:i:s');
+		$data['fecha']=date('Y-m-d');
+		$data['usuario']=$this->session->userdata('id_usuario');
+		$this->db->insert('retiros',$data);
+	}
+
 }
 
 /* End of file Ventas_model.php */

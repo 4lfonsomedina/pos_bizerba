@@ -39,6 +39,20 @@ class Ventas_controller extends CI_Controller {
 		$this->load->view('pie');
 	}
 
+	function retiro(){
+		$data['caja']=$this->Ventas_model->get_caja_abierta();
+		if(!$data['caja']){ Redirect('Ventas_controller/pos');}
+		$data['empresa'] = $this->Empresa_model->get_empresa();
+		$this->load->view('cabecera');
+		$this->load->view('ventas/retiro',$data);
+		$this->load->view('pie');
+	}
+
+	function realizar_retiro(){
+		$this->Ventas_model->registrar_retiro($_POST);
+		Redirect('Ventas_controller/pos');
+	}
+
 }
 
 /* End of file Ventas_controller.php */
